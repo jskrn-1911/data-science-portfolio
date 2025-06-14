@@ -1,20 +1,22 @@
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
+import { schema } from "./sanity/schema";
+import { simplerColorInput } from "sanity-plugin-simpler-color-input";
+import { structureTool } from "sanity/structure";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'nzqdutte'
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 
 export default defineConfig({
-  name: 'default',
-  title: 'Data Science Portfolio Studio',
-
+  basePath: "/studio",
   projectId,
   dataset,
-
-  plugins: [deskTool(), visionTool()],
-
-  schema: {
-    types: [], // Your schema types
-  },
-})
+  // Add and edit the content schema in the './sanity/schema' folder
+  schema,
+  plugins: [
+    structureTool(),
+    visionTool(),
+    simplerColorInput(),
+  ],
+});

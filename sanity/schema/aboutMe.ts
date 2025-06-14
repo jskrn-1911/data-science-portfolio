@@ -6,6 +6,11 @@ const aboutMe = defineType({
     type: 'document',
     fields: [
         defineField({
+            name: 'title',
+            title: 'Title',
+            type: 'string',
+        }),
+        defineField({
             name: 'images',
             title: 'Images',
             type: 'array',

@@ -1,5 +1,4 @@
 import { defineConfig } from 'sanity'
-import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
 import { schema } from "./sanity/schema";
 import { simplerColorInput } from "sanity-plugin-simpler-color-input";

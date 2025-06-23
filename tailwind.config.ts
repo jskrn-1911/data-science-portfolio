@@ -23,9 +23,11 @@ const config: Config = {
         primary: '#0f172a', // Customize as needed
         secondary: '#1e293b',
         accent: '#2563eb',
+        'light-pink':'#ffc9f0',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
       },
     },
   },

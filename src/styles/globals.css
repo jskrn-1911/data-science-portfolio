@@ -1,17 +1,50 @@
 @import "tailwindcss";
-@tailwind utilities;
-@import "tailwindcss/preflight";
+/* @tailwind utilities;
+@import "tailwindcss/preflight"; */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme inline {
+  --color-light-pink: #ffc9f0;
+  --font-outfit: "Outfit", sans-serif;
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1536px;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), sans-serif;
+@layer utility {
+  .outer-spacing {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hover-scale{
+    @apply hover:scale-[1.05] transition-all duration-300
+  }
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
+/* body {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+} */
+@layer components{
 
-  background-image: radial-gradient(#d4d4d4 0.5px, transparent 0.5px);
-  background-size: 15px 20px;
+  .main-container {
+    max-width: 1136px;
+    margin-inline: auto;
+    width: 100%;
+  }
+  .bg-dots{
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: 24px;
+    background-image: url('../assets/images/bg_image_dots.svg');
+  }
 }

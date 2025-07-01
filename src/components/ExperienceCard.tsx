@@ -2,13 +2,13 @@ import Image from 'next/image'
 import React from 'react'
 import bg_image_dots from '@/assets/images/bg_image_dots.svg'
 
-interface ExprienceCardProps {
+interface ExperienceCardProps {
   background: string;
   title: string;
   period: string;
   description: string;
 }
-const ExprienceCard:React.FC<ExprienceCardProps> = ({background, title, period, description}) => {
+const ExperienceCard:React.FC<ExperienceCardProps> = ({background, title, period, description}) => {
   return (
     <>
       <div className={`${background} rounded-[16px] p-6 pt-4 border border-black relative hover-scale`}>
@@ -27,4 +27,4 @@ const ExprienceCard:React.FC<ExprienceCardProps> = ({background, title, period, 
   )
 }
 
-export default ExprienceCard
+export default ExperienceCard

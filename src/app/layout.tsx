@@ -3,6 +3,7 @@ import "../styles/globals.css";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { fetchFooter, fetchNavbar } from "@/lib/fetchers";
 
 
 export const metadata: Metadata = {
@@ -10,16 +11,20 @@ export const metadata: Metadata = {
   description: "Portfolio website created with Sanity and Next.js",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const navbarData = await fetchNavbar();
+  const footerData = await fetchFooter();
+
+  // console.log("<<::testing for fetcher::>>", footerData);
   return (
     <html lang="en">
       <body className={`antialiased font-outfit text-base font-normal relative text-black `}>
         <div className="absolute inset-0 z-[-1] opacity-[.1] bg-dots h-full"></div>
-        <Navbar />  {/* ✅ Navbar visible on ALL pages */}
+        <Navbar {...navbarData} />
         <main className="py-[120px] xl:pt-[140px]">
           {children}
         </main>
-        <Footer />
+        <Footer {...footerData} />
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
 import React from 'react'
 import PortfolioCard from './PortfolioCard'
-import feature_card_image from '@/assets/images/feature_card_image.avif'
 import { urlForImage } from '@/lib/sanityImage';
 
 

@@ -5,7 +5,7 @@ import React from 'react'
 
 const page = async () => {
     const data = await fetchContactPage();
-    console.log("Contact Page =>", data);
+    // console.log("Contact Page =>", data);
     return (
         <>
             <PortfolioHeadingSection title={data.title} description={data.description} />

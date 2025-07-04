@@ -43,7 +43,7 @@ const Footer: React.FC<FooterProps> = ({ heading, subheading, hireMeLink, pageLi
                         <p className='text-xl text-[#fff9] md:max-w-[440px] w-full mx-auto'>{subheading}</p>
                     </div>
                     <div className="w-fit mx-auto">
-                        <Button label="Hire Me!" variant="secondary2" type='link' href={"/contact"} />
+                        <Button label="Hire Me!" variant="secondary2" type='link' href={hireMeLink.link} />
                     </div>
                 </div>
 

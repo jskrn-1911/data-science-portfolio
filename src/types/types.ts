@@ -1,3 +1,4 @@
+import { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import { PortableTextBlock } from 'next-sanity';
 import { StaticImageData } from 'next/image'
 
@@ -175,7 +176,7 @@ export interface ContactPageProps {
     }[];
     metaTitle?: string;
     metaDescription?: string;
-    ogImage?: any; // or use ImageType if available
+    ogImage?: SanityImageSource; // or use ImageType if available
 }
 
 export interface SocialLink {

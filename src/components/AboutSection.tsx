@@ -1,7 +1,6 @@
 import React from 'react'
 import SectionLayout from './layout/SectionLayout'
 import Image from 'next/image'
-import profile_img from '@/assets/images/profile_img.avif'
 import Button from './ui/Button'
 import { AboutMeProps } from '@/types/types'
 import { urlFor } from '@/lib/sanity'
@@ -55,7 +54,7 @@ const AboutSection: React.FC<Props> = ({ aboutMe }) => {
                             <PortableText value={aboutMe.description} />
                         </div>
                         <div className="mt-6">
-                            <Button variant='secondary' label={aboutMe.contactButton.label} href={aboutMe.contactButton.link} />
+                            <Button variant='secondary' label={aboutMe.contactButton.label} href={aboutMe.contactButton.link} type='link'/>
                         </div>
                     </div>
                 </div>
@@ -65,24 +64,3 @@ const AboutSection: React.FC<Props> = ({ aboutMe }) => {
 }
 
 export default AboutSection
-
-const aboutImages = [
-    {
-        imgSrc: profile_img,
-        rotate: 'rotate-[-15deg]',
-        background: 'bg-light-sky-blue',
-        zIndex: 'z-[2]'
-    },
-    {
-        imgSrc: profile_img,
-        rotate: 'rotate-[15deg]',
-        background: 'bg-pastel-yellow',
-        zIndex: 'z-[8]'
-    },
-    {
-        imgSrc: profile_img,
-        rotate: 'rotate-[0deg]',
-        background: 'bg-light-pink',
-        zIndex: 'z-10'
-    },
-]

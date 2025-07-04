@@ -10,13 +10,13 @@ const NotFound = () => {
                     Oops! This page wandered off...
                 </h1>
                 <p className="text-lg sm:text-xl text-black max-w-xl">
-                    Looks like the page you're looking for doesn’t exist.
+                    Looks like the page you are looking for does not exist.
                 </p>
                 <p>
-                    Maybe it's sipping a latte somewhere? <CgCoffee className='h-6 w-6 inline' />
+                    Maybe its sipping a latte somewhere? <CgCoffee className='h-6 w-6 inline' />
                 </p>
                 <p className="text-lg sm:text-xl text-black">
-                    Don’t worry, you can head back home and find your way from there.
+                    Dont worry, you can head back home and find your way from there.
                 </p>
                 <Button label="Go to Homepage" href="/" type="link" variant="primary2" />
             </div>

@@ -34,8 +34,9 @@ interface PortfolioCardProps {
     title: string;
     background: string;
     buttonLabel?: string;
+    slug?: string; // Optional slug prop for blog items
 }
-const PortfolioCard: React.FC<PortfolioCardProps> = ({ imgSrc, title, background, buttonLabel = "See Project" }) => {
+const PortfolioCard: React.FC<PortfolioCardProps> = ({ imgSrc, title, background, buttonLabel = "See Project", slug="#" }) => {
     return (
         <>
             <div className={`${background} border border-black rounded-[16px] p-3 space-y-3 hover-scale`}>
@@ -45,7 +46,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ imgSrc, title, background
                     className="rounded-sm w-full h-auto object-cover border border-black" />
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
                     <h3 className='text-2xl text-black'>{title}</h3>
-                    <Button label={buttonLabel} variant="secondary" className="whitespace-nowrap w-full sm:w-auto" />
+                    <Button label={buttonLabel} type='link' href={slug} variant="secondary" className="whitespace-nowrap w-full sm:w-auto" />
                 </div>
             </div>
 

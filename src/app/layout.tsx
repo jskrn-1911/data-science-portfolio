@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`antialiased font-outfit text-base font-normal relative text-black `}>
         <div className="absolute inset-0 z-[-1] opacity-[.1] bg-dots h-full"></div>
         <Navbar />  {/* ✅ Navbar visible on ALL pages */}
-        <main className="py-[120px] xl:pt-[140px]">
+        <main className="py-[120px] xl:pt-[140px] overflow-x-clip">
           {children}
         </main>
         <Footer />

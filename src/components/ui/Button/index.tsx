@@ -105,7 +105,7 @@ const Button: React.FC<ButtonProps> = ({ label, onClick, className, variant, typ
 
   if (type === 'link') {
     return (
-      <Link href={href} className={`cursor-pointer block rounded-full text-xl px-5 pt-[11px] pb-[13px] ${buttonClasses} ${className}`}>{label}
+      <Link href={href} className={`cursor-pointer text-center block rounded-full text-xl px-5 pt-[11px] pb-[13px] ${buttonClasses} ${className}`}>{label}
         {renderHoverEffect()}
       </Link>
     )

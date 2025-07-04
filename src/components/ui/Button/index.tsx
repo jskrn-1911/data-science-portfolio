@@ -14,9 +14,10 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
   variant?: 'primary' | 'primary2' | 'secondary' | 'secondary2';
+  disable?:boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick, className, variant, type = "button", href = "#" }) => {
+const Button: React.FC<ButtonProps> = ({ label, onClick, className, variant, type = "button", href = "#", disable }) => {
   const buttonClasses = variant === 'primary'
     ? 'bg-black text-white relative overflow-hidden z-[2] group'
     : variant === 'primary2'
@@ -73,7 +74,7 @@ const Button: React.FC<ButtonProps> = ({ label, onClick, className, variant, typ
   }
   return (
     <>
-      <button type={type} onClick={onClick} className={`cursor-pointer rounded-full text-xl px-5 pt-[11px] pb-[13px] ${buttonClasses} ${className}`}>{label}
+      <button type={type} onClick={onClick} className={`cursor-pointer rounded-full text-xl px-5 pt-[11px] pb-[13px] ${buttonClasses} ${className}`} disabled={disable}>{label}
         {renderHoverEffect()}
       </button>
       {/* <button className="rounded-full bg-white border border-black text-xl px-5 pt-[11px] pb-[13px] text-black hover:bg-black hover:text-white transition-all duration-300">See My Portfolio</button> */}

@@ -49,3 +49,6 @@
     background-image: url("../assets/images/bg_image_dots.svg");
   }
 }
+html {
+  scroll-behavior: smooth;
+}

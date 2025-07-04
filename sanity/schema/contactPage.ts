@@ -38,7 +38,7 @@ const contactPage = defineType({
         defineField({
             name: 'contactNumber',
             title: 'Contact number (optional)',
-             type: 'array',
+            type: 'array',
             of: [{ type: 'string' }],
             description: 'Add one contact number for contact purposes',
         }),
@@ -51,6 +51,11 @@ const contactPage = defineType({
                     type: 'object',
                     name: 'socialLink',
                     fields: [
+                        defineField({
+                            name: 'username',
+                            title: 'Username',
+                            type: 'string',
+                        }),
                         defineField({
                             name: 'platform',
                             title: 'Platform',

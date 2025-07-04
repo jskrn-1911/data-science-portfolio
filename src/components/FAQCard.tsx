@@ -1,18 +1,17 @@
 "use client"
+import { FAQCardProps } from '@/types/types';
+import { PortableText } from 'next-sanity';
 import React, { useRef, useState } from 'react'
 
-interface FAQCardProps {
-    question?: string;
-    answer?: string;
-}
-const FAQCard:React.FC<FAQCardProps> = ({question, answer}) => {
+
+const FAQCard: React.FC<FAQCardProps> = ({ question, answer }) => {
     const contentRef = useRef<HTMLParagraphElement>(null);
     const contentContainerRef = useRef<HTMLDivElement>(null);
     const [isOpen, setIsOpen] = useState(false);
     const toggleAccordion = () => {
 
         if (contentRef.current && contentContainerRef.current) {
-            if(contentContainerRef.current.style.height === '0px' || contentContainerRef.current.style.height === '') {
+            if (contentContainerRef.current.style.height === '0px' || contentContainerRef.current.style.height === '') {
                 contentContainerRef.current.style.height = `${contentRef.current.scrollHeight}px`;
             }
             else {
@@ -34,9 +33,9 @@ const FAQCard:React.FC<FAQCardProps> = ({question, answer}) => {
                     </span>
                 </button>
                 <div className="transition-all duration-300 overflow-hidden h-0" ref={contentContainerRef}>
-                    <p className='text-xl text-black p-6 pt-2' ref={contentRef}>
-                       {answer}
-                    </p>
+                    <div className='text-xl text-black p-6 pt-2' ref={contentRef}>
+                        <PortableText value={answer} />
+                    </div>
                 </div>
             </div>
         </>

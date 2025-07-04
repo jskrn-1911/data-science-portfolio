@@ -1,11 +1,11 @@
 import React from 'react'
 import SectionLayout from './layout/SectionLayout'
 import Button from './ui/Button'
-import { FeatureProjectSectionProps } from '@/types/types'
+import { FeaturedProjectSectionProps } from '@/types/types'
 import { urlFor } from '@/lib/sanity'
-import FeatureProjectCard from './FeatureCard'
+import FeatureProjectCard from './FeaturedProjectCard'
 
-const FeatureProjectSection: React.FC<FeatureProjectSectionProps> = ({ featuredProjects }) => {
+const FeaturedProjectSection: React.FC<FeaturedProjectSectionProps> = ({ featuredProjects }) => {
 
     return (
         <SectionLayout heading="Featured Projects">
@@ -33,4 +33,4 @@ const FeatureProjectSection: React.FC<FeatureProjectSectionProps> = ({ featuredP
     )
 }
 
-export default FeatureProjectSection
+export default FeaturedProjectSection

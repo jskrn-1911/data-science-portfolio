@@ -1,10 +1,10 @@
 import React from 'react'
 import Image, { StaticImageData } from 'next/image'
 import Button from './ui/Button'
-import { FeatureProjectCardProps } from '@/types/types'
+import { FeaturedProjectCardProps } from '@/types/types'
 
 
-const FeatureProjectCard: React.FC<FeatureProjectCardProps> = ({ imgSrc, background, slug, rightTilte, leftTilte, title, buttonLabel = "See Project" }) => {
+const FeaturedProjectCard: React.FC<FeaturedProjectCardProps> = ({ imgSrc, background, slug, rightTilte, leftTilte, title, buttonLabel = "See Project" }) => {
     const isStaticImage = typeof imgSrc !== 'string'
 
     return (
@@ -21,4 +21,4 @@ const FeatureProjectCard: React.FC<FeatureProjectCardProps> = ({ imgSrc, backgro
     )
 }
 
-export default FeatureProjectCard
+export default FeaturedProjectCard

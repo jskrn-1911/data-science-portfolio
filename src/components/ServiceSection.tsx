@@ -1,5 +1,4 @@
 import React from 'react'
-import SectionHeading from './SectionHeading'
 import ServiceCard from './ServiceCard'
 import SectionLayout from './layout/SectionLayout'
 import { ServiceSectionProps } from '@/types/types'

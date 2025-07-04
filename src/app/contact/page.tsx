@@ -5,14 +5,11 @@ import React from 'react'
 
 const page = async () => {
     const data = await fetchContactPage();
-    // console.log("Contact Page =>", data);
+    console.log("Contact Page =>", data);
     return (
         <>
-            {/* <div>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
-        </div> */}
-            <PortfolioHeadingSection title="My Portfolio" description="Have a project in mind or a question? Reach out via the form below, email me directly, or connect with me on social media." />
-                <ContactUsFormSection/>
+            <PortfolioHeadingSection title={data.title} description={data.description} />
+            <ContactUsFormSection emails={data.emails} socialLinks={data.socialLinks} contactNumber={data.contactNumber} />
         </>
     )
 }

@@ -6,7 +6,9 @@ import ExperienceSection from "@/components/ExperienceSection";
 import AboutSection from "@/components/AboutSection";
 import FAQSection from "@/components/FAQSection";
 import { Metadata } from "next";
-import FeatureProjectSection from "@/components/FeatureProjectSection";
+import FeaturedProjectSection from "@/components/FeaturedProjectSection";
+import FeaturedBlogSection from "@/components/FeaturedBlogSection";
+import EducationSection from "@/components/EducationSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await fetchHomePage();
@@ -23,16 +25,18 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Home() {
   const data = await fetchHomePage();
-  console.log("Homepage data =>", data);
+  // console.log("Homepage data =>", data);
 
   return (
     <>
       <HeroSection {...data.hero} />
-      <FeatureProjectSection featuredProjects={data.feauredProjects} />
-      <ServiceSection services={data.services}/>
-      <ExperienceSection />
-      <AboutSection />
-      <FAQSection />
+      <FeaturedProjectSection featuredProjects={data.feauredProjects} />
+      <FeaturedBlogSection featuredBlogs={data.featuredBlogs} />
+      <ServiceSection services={data.services} />
+      <ExperienceSection experience={data.experience} />
+      <EducationSection education={data.education} />
+      <AboutSection aboutMe={data.aboutMe} />
+      <FAQSection faqs={data.faqs} />
     </>
   );
 }

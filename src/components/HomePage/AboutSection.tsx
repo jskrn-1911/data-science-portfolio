@@ -1,10 +1,9 @@
 import React from 'react'
-import SectionLayout from './layout/SectionLayout'
-import Image from 'next/image'
-import Button from './ui/Button'
+import SectionLayout from '../layout/SectionLayout'
+import Button from '../ui/Button'
 import { AboutMeProps } from '@/types/types'
-import { urlFor } from '@/lib/sanity'
 import { PortableText } from 'next-sanity'
+import AboutPhotoSection from './AboutPhotoSection'
 
 interface Props {
     aboutMe: AboutMeProps
@@ -22,29 +21,7 @@ const AboutSection: React.FC<Props> = ({ aboutMe }) => {
                                     <Image src={item.imgSrc} alt="profile" className="w-full h-full border border-black rounded-[4px] object-cover object-center" />
                                 </div>
                             ))} */}
-                            {aboutMe.images.slice(0, 3).map((img, index) => {
-                                const rotate = index === 0 ? 'rotate-[-15deg]' : index === 1 ? 'rotate-[15deg]' : 'rotate-[0deg]'
-                                const background = index === 0
-                                    ? 'bg-light-sky-blue'
-                                    : index === 1
-                                        ? 'bg-pastel-yellow'
-                                        : 'bg-light-pink'
-                                const zIndex = index === 0 ? 'z-[2]' : index === 1 ? 'z-[8]' : 'z-10'
-                                return (
-                                    <div
-                                        key={index}
-                                        className={`p-3 ${background} ${rotate} ${zIndex} absolute inset-0 rounded-[16px] aspect-square w-full h-auto md:w-[466px] md:h-[466px] border border-black`}
-                                    >
-                                        <Image
-                                            src={urlFor(img)}
-                                            alt="Profile"
-                                            width={466}
-                                            height={466}
-                                            className="w-full h-full object-cover object-center border border-black rounded-[4px]"
-                                        />
-                                    </div>
-                                )
-                            })}
+                            <AboutPhotoSection images={aboutMe.images} />
                         </div>
                     </div>
                     <div className="xl:ms-10">
@@ -54,7 +31,9 @@ const AboutSection: React.FC<Props> = ({ aboutMe }) => {
                             <PortableText value={aboutMe.description} />
                         </div>
                         <div className="mt-6">
-                            <Button variant='secondary' label={aboutMe.contactButton.label} href={aboutMe.contactButton.link} type='link'/>
+                            <div className="max-w-fit">
+                                <Button variant='secondary' label={aboutMe.contactButton.label} href={aboutMe.contactButton.link} type='link' />
+                            </div>
                         </div>
                     </div>
                 </div>

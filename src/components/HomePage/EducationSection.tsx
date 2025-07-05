@@ -1,7 +1,7 @@
 import React from 'react'
-import SectionLayout from './layout/SectionLayout'
+import SectionLayout from '../layout/SectionLayout'
 import { EducationSectionProps } from '@/types/types'
-import EducationCard from './EducationCard'
+import EducationCard from '../cards/EducationCard'
 
 const EducationSection: React.FC<EducationSectionProps> = ({ education }) => {
     return (

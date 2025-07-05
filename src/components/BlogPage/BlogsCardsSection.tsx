@@ -1,9 +1,9 @@
 import React from 'react'
-import PortfolioCard from './PortfolioCard'
 import { urlForImage } from '@/lib/sanityImage';
+import BlogCard from '../cards/BlogCard';
 
 
-type Project = {
+type Blog = {
     title: string;
     images?: {
         asset: {
@@ -13,19 +13,19 @@ type Project = {
     }[];
 };
 
-interface PortfolioCardsSectionProps {
-    projects: Project[];
+interface BlogsCardsSectionProps {
+    projects: Blog[];
 }
 const bgColors = ['bg-light-sky-blue', 'bg-pastel-yellow', 'bg-light-pink'];
 
-const PortfolioCardsSection: React.FC<PortfolioCardsSectionProps> = ({ projects }) => {
+const BlogsCardsSection: React.FC<BlogsCardsSectionProps> = ({ projects }) => {
     return (
         <>
             <section className={`outer-spacing `}>
                 <div className="main-container">
                     <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
                         {projects.map((project, index) => (
-                            <PortfolioCard
+                            <BlogCard
                                 key={index}
                                 title={project.title}
                                 imgSrc={
@@ -43,4 +43,4 @@ const PortfolioCardsSection: React.FC<PortfolioCardsSectionProps> = ({ projects 
     )
 }
 
-export default PortfolioCardsSection
+export default BlogsCardsSection

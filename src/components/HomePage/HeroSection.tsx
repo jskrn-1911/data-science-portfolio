@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './ui/Button'
+import Button from '../ui/Button'
 import Image from 'next/image'
 import { HeroProps } from '@/types/types'
 import { urlFor } from '@/lib/sanity'

@@ -1,5 +1,5 @@
-import ContactUsFormSection from '@/components/ContactUsFormSection';
-import PortfolioHeadingSection from '@/components/PortfolioHeadingSection';
+import ContactUsFormSection from '@/components/ContactPage/ContactUsFormSection';
+import PortfolioHeadingSection from '@/components/PortfolioPage/PortfolioHeadingSection';
 import { fetchContactPage } from '@/lib/fetchers';
 import React from 'react'
 

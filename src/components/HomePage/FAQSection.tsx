@@ -1,6 +1,6 @@
 import React from 'react'
-import SectionLayout from './layout/SectionLayout'
-import FAQCard from './FAQCard'
+import SectionLayout from '../layout/SectionLayout'
+import FAQCard from '../cards/FAQCard'
 import { FAQSectionProps } from '@/types/types'
 
 const FAQSection: React.FC<FAQSectionProps> = ({ faqs }) => {

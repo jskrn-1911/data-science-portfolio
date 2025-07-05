@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link'
 import React from 'react'
-import Button from './ui/Button'
+import Button from '../ui/Button'
 import { ContactUsFormSectionProps } from '@/types/types'
 import { FaXTwitter, FaDribbble, FaInstagram, FaLinkedin, FaGithub, FaFacebook, FaYoutube, FaBehance, FaGlobe } from "react-icons/fa6";
 

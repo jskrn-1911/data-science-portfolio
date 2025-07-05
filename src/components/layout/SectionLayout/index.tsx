@@ -1,4 +1,4 @@
-import SectionHeading from '@/components/SectionHeading';
+import SectionHeading from '@/components/common/SectionHeading';
 import React from 'react'
 
 interface SectionHeadingProps {

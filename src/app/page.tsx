@@ -1,14 +1,14 @@
 
 import { fetchHomePage } from "@/lib/fetchers"; // adjust the path accordingly
-import HeroSection from "@/components/HeroSection";
-import ServiceSection from "@/components/ServiceSection";
-import ExperienceSection from "@/components/ExperienceSection";
-import AboutSection from "@/components/AboutSection";
-import FAQSection from "@/components/FAQSection";
+import HeroSection from "@/components/HomePage/HeroSection";
+import ServiceSection from "@/components/HomePage/ServiceSection";
+import ExperienceSection from "@/components/HomePage/ExperienceSection";
+import AboutSection from "@/components/HomePage/AboutSection";
+import FAQSection from "@/components/HomePage/FAQSection";
 import { Metadata } from "next";
-import FeaturedProjectSection from "@/components/FeaturedProjectSection";
-import FeaturedBlogSection from "@/components/FeaturedBlogSection";
-import EducationSection from "@/components/EducationSection";
+import FeaturedProjectSection from "@/components/HomePage/FeaturedProjectSection";
+import FeaturedBlogSection from "@/components/HomePage/FeaturedBlogSection";
+import EducationSection from "@/components/HomePage/EducationSection";
 
 export async function generateMetadata(): Promise<Metadata> {
   const data = await fetchHomePage();

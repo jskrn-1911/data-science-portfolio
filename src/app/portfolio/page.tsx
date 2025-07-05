@@ -1,6 +1,6 @@
 
-import PortfolioCardsSection from '@/components/PortfolioCardsSection';
-import PortfolioHeadingSection from '@/components/PortfolioHeadingSection';
+import PortfolioCardsSection from '@/components/PortfolioPage/PortfolioCardsSection';
+import PortfolioHeadingSection from '@/components/PortfolioPage/PortfolioHeadingSection';
 import { fetchPortfolioPage } from '@/lib/fetchers';
 import React from 'react'
 

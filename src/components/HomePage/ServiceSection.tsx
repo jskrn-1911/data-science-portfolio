@@ -1,6 +1,6 @@
 import React from 'react'
-import ServiceCard from './ServiceCard'
-import SectionLayout from './layout/SectionLayout'
+import ServiceCard from '../cards/ServiceCard'
+import SectionLayout from '../layout/SectionLayout'
 import { ServiceSectionProps } from '@/types/types'
 
 const ServiceSection: React.FC<ServiceSectionProps> = ({ services }) => {

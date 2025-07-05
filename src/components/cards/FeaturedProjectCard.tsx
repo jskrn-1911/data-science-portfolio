@@ -1,6 +1,6 @@
 import React from 'react'
 import Image, { StaticImageData } from 'next/image'
-import Button from './ui/Button'
+import Button from '../ui/Button'
 import { FeaturedProjectCardProps } from '@/types/types'
 
 

@@ -1,21 +1,8 @@
 import React from 'react'
-import { urlForImage } from '@/lib/sanityImage';
 import PortfolioCard from '../cards/PortfolioCard';
+import { urlFor } from '@/lib/sanity';
+import { PortfolioCardsSectionProps } from '@/types/portfolio';
 
-
-type Project = {
-    title: string;
-    images?: {
-        asset: {
-            _type: string;
-            _ref: string;
-        };
-    }[];
-};
-
-interface PortfolioCardsSectionProps {
-    projects: Project[];
-}
 const bgColors = ['bg-light-sky-blue', 'bg-pastel-yellow', 'bg-light-pink'];
 
 const PortfolioCardsSection: React.FC<PortfolioCardsSectionProps> = ({ projects }) => {
@@ -28,12 +15,19 @@ const PortfolioCardsSection: React.FC<PortfolioCardsSectionProps> = ({ projects 
                             <PortfolioCard
                                 key={index}
                                 title={project.title}
+                                slug={project.slug}
                                 imgSrc={
                                     project.images?.[0]?.asset
-                                        ? urlForImage(project.images[0])
-                                        : '/fallback.jpg' // optional fallback image
+                                        ? urlFor(project.images[0])
+                                        : '/fallback.jpg'
                                 }
                                 background={bgColors[index % bgColors.length]}
+                                date={project.date}
+                                description={project.description}
+                                liveLink={project.liveLink}
+                                githubLink={project.githubLink}
+                                category={project.category}
+                                views={project.views}
                             />
                         ))}
                     </div>

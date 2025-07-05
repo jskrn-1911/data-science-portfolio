@@ -191,3 +191,4 @@ export interface ContactUsFormSectionProps {
     socialLinks?: SocialLink[];
     contactNumber?: string;
 }
+

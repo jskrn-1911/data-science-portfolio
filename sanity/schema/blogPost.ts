@@ -30,6 +30,13 @@ const blogPost = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'views',
+      title: 'Page Views',
+      type: 'number',
+      readOnly: true,
+      initialValue: 0,
+    }),
+    defineField({
       name: 'coverImage',
       title: 'Cover Image',
       type: 'image',
@@ -50,6 +57,13 @@ const blogPost = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'category',
+      title: 'Project Category',
+      type: 'string',
+      description: 'All lowercase (e.g. "ai", "ml", "cv")',
+      validation: Rule => Rule.required().lowercase(),
+    }),
+    defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',
@@ -60,7 +74,7 @@ const blogPost = defineType({
       name: 'authorName',
       title: 'Author Name',
       type: 'string',
-      initialValue: 'Your Name', 
+      initialValue: 'Your Name',
     }),
     defineField({
       name: 'featured',

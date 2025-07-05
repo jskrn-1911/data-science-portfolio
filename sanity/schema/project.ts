@@ -22,6 +22,13 @@ const project = defineType({
             validation: (Rule) => Rule.required(),
         }),
         defineField({
+            name: 'views',
+            title: 'Page Views',
+            type: 'number',
+            readOnly: true,
+            initialValue: 0,
+        }),
+        defineField({
             name: 'description',
             title: 'Short Description',
             type: 'text',
@@ -40,6 +47,13 @@ const project = defineType({
             title: 'Completion Date',
             type: 'date',
             validation: (Rule) => Rule.required(),
+        }),
+        defineField({
+            name: 'category',
+            title: 'Project Category',
+            type: 'string',
+            description: 'All lowercase (e.g. "ai", "ml", "cv")',
+            validation: Rule => Rule.required().lowercase(),
         }),
         defineField({
             name: 'service',

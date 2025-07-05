@@ -1,39 +1,30 @@
 import React from 'react'
-import { urlForImage } from '@/lib/sanityImage';
 import BlogCard from '../cards/BlogCard';
-
-
-type Blog = {
-    title: string;
-    images?: {
-        asset: {
-            _type: string;
-            _ref: string;
-        };
-    }[];
-};
+import { BlogPost } from '@/types/blog';
 
 interface BlogsCardsSectionProps {
-    projects: Blog[];
+    blogs: BlogPost[];
 }
 const bgColors = ['bg-light-sky-blue', 'bg-pastel-yellow', 'bg-light-pink'];
 
-const BlogsCardsSection: React.FC<BlogsCardsSectionProps> = ({ projects }) => {
+const BlogsCardsSection: React.FC<BlogsCardsSectionProps> = ({ blogs }) => {
     return (
         <>
             <section className={`outer-spacing `}>
                 <div className="main-container">
                     <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-                        {projects.map((project, index) => (
+                        {blogs.map((blog, index) => (
                             <BlogCard
-                                key={index}
-                                title={project.title}
-                                imgSrc={
-                                    project.images?.[0]?.asset
-                                        ? urlForImage(project.images[0])
-                                        : '/fallback.jpg' // optional fallback image
-                                }
+                                key={blog.slug.current}
+                                title={blog.title}
+                                slug={blog.slug}
+                                excerpt={blog.excerpt}
+                                imgSrc={blog.coverImage}
                                 background={bgColors[index % bgColors.length]}
+                                buttonLabel="Read More"
+                                publishedAt={blog.publishedAt}
+                                category={blog.category}
+                                views={blog.views}
                             />
                         ))}
                     </div>

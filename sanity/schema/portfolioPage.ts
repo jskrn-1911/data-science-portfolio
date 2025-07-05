@@ -20,8 +20,7 @@ const portfolioPage = defineType({
         defineField({
             name: 'description',
             title: 'Page Description',
-            type: 'string',
-            validation: (Rule) => Rule.required(),
+            type: 'text',
         }),
         defineField({
             name: "projects",

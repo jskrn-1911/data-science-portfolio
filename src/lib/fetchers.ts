@@ -114,46 +114,6 @@ export async function fetchHomePage() {
   }`)
 }
 
-export async function fetchPortfolioPage() {
-  return sanityClient.fetch(`*[_type == "portfolioPage"][0]{
-    pageName,
-    title,
-    description,
-    metaTitle,
-    metaDescription,
-    ogImage,
-    projects[]->{
-      title,
-      slug,
-      date,
-      description,
-      liveLink,
-      githubLink,
-      featured,
-      images,
-    }
-  }`)
-}
-
-export async function fetchBlogPage() {
-  return sanityClient.fetch(`*[_type == "blogsPage"][0]{
-    pageName,
-    title,
-    description,
-    metaTitle,
-    metaDescription,
-    ogImage,
-    blogs[]->{
-      title,
-      slug,
-      excerpt,
-      coverImage,
-      publishedAt,
-      featured,
-    }
-  }`)
-}
-
 export async function fetchContactPage() {
   return sanityClient.fetch(`*[_type == "contactPage"][0]{
     pageName,
@@ -166,6 +126,29 @@ export async function fetchContactPage() {
     metaTitle,
     metaDescription,
     ogImage
+  }`)
+}
+
+export async function fetchPortfolioPage() {
+  return sanityClient.fetch(`*[_type == "portfolioPage"][0]{
+    pageName,
+    title,
+    description,
+    metaTitle,
+    metaDescription,
+    ogImage,
+    projects[]->{
+      title,
+      slug,
+      category,
+      views,
+      date,
+      description,
+      liveLink,
+      githubLink,
+      featured,
+      images,
+    }
   }`)
 }
 
@@ -183,10 +166,33 @@ export async function fetchProjectBySlug(slug: string) {
     images,
     liveLink,
     githubLink,
-    featured
+    featured,
+    category,
+    views,
     }`,
     { slug }
   )
+}
+
+export async function fetchBlogPage() {
+  return sanityClient.fetch(`*[_type == "blogsPage"][0]{
+    pageName,
+    title,
+    description,
+    metaTitle,
+    metaDescription,
+    ogImage,
+    blogs[]->{
+      title,
+      slug,
+      category,
+      views,
+      excerpt,
+      coverImage,
+      publishedAt,
+      featured,
+    }
+  }`)
 }
 
 export async function fetchBlogBySlug(slug: string) {

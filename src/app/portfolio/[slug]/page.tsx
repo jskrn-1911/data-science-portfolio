@@ -1,6 +1,7 @@
 import { fetchProjectBySlug } from '@/lib/fetchers';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import { incrementViewsById } from '@/lib/views';
 
 export const revalidate = 0;
 
@@ -25,7 +26,8 @@ const page = async ({ params }: Props) => {
     const project = await fetchProjectBySlug(slug);
 
     if (!project) return notFound();
-
+    // console.log("Project Page =>", project);
+    await incrementViewsById(project._id);
     return (
         <main>
             <h1>{project.title}</h1>

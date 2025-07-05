@@ -20,7 +20,7 @@ type blogType = {
     categories: string[];
     authorName?: string;
     excerpt?: string;
-     content?: PortableTextBlock[]; 
+    content?: PortableTextBlock[];
 };
 
 
@@ -54,9 +54,9 @@ const SingleBlogContent: React.FC<SingleBlogContentProps> = ({ blog }) => {
                         </div>
                     </div>
                     <div className="mt-10 flex items-start justify-between flex-col xl:flex-row gap-y-4">
-                        <SingleBlogLeftSidebar publishTime={localDateTime} categories={blog.categories}/>
-                        <SingleBlogCenterContent title={blog.title} content={blog.content}/>
-                        <SingleBlogRightSidebar publishTime={localDateTime} description={blog.excerpt} author={blog.authorName}/>
+                        <SingleBlogLeftSidebar publishTime={localDateTime} categories={blog.categories} />
+                        <SingleBlogCenterContent title={blog.title} description={blog.excerpt} content={blog.content} />
+                        <SingleBlogRightSidebar publishTime={localDateTime} description={blog.excerpt} author={blog.authorName} />
                     </div>
                 </div>
             </section>

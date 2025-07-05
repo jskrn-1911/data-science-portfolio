@@ -2,6 +2,7 @@ import { fetchBlogBySlug } from '@/lib/fetchers';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import SingleBlogContent from '@/components/BlogPage/SingleBlogContent';
+import { incrementViewsById } from '@/lib/views';
 
 export const revalidate = 0;
 
@@ -26,7 +27,7 @@ const page = async ({ params }: Props) => {
   const blog = await fetchBlogBySlug(slug);
 
   if (!blog) return notFound();
-
+  await incrementViewsById(blog._id);
   return (
     <main>
       <SingleBlogContent blog={blog} />

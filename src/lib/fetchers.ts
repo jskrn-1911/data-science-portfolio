@@ -154,6 +154,7 @@ export async function fetchPortfolioPage() {
 
 export async function fetchProjectBySlug(slug: string) {
   return sanityClient.fetch(`*[_type == "project" && slug.current == $slug][0]{
+    _id,
     title,
     slug,
     description,
@@ -198,6 +199,7 @@ export async function fetchBlogPage() {
 export async function fetchBlogBySlug(slug: string) {
   return sanityClient.fetch(
     `*[_type == "blogPost" && slug.current == $slug][0]{
+      _id,
       title,
       slug,
       excerpt,

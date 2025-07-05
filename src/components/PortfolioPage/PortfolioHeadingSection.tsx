@@ -1,4 +1,3 @@
-import { PortableText, PortableTextBlock } from 'next-sanity';
 import React from 'react'
 
 interface PortfolioHeadingSectionProps {

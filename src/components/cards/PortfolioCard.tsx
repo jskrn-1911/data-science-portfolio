@@ -1,5 +1,5 @@
 import React from 'react'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Button from '../ui/Button';
 import { PortfolioCardProps } from '@/types/portfolio';
 import { GoEye } from "react-icons/go";

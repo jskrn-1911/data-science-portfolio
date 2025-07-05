@@ -1,5 +1,4 @@
-import { SanityImageSource } from "@sanity/image-url/lib/types/types";
-import { StaticImageData } from "next/image";
+import { PortableTextBlock } from 'next-sanity';
 
 export interface SanityImage {
   asset: {
@@ -8,10 +7,10 @@ export interface SanityImage {
   };
 }
 
-export interface PortableTextBlock {
-  _type: string;
-  [key: string]: any;
-}
+// export interface PortableTextBlock {
+//   _type: string;
+//   [key: string]: any;
+// }
 
 export interface BlogPost {
   _id: string;

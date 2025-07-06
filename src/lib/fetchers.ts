@@ -164,7 +164,10 @@ export async function fetchProjectBySlug(slug: string) {
     client,
     technologies,
     tools,
-    images,
+    images[]{
+     asset->{_id, url},
+     title
+    },
     liveLink,
     githubLink,
     featured,

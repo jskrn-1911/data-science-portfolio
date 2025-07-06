@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionLayout from '../layout/SectionLayout'
-import ExperienceCard from '../cards/ExperienceCard'
+import ExperienceCard from '../ui/cards/ExperienceCard'
 import { ExperienceSectionProps } from '@/types/types'
 
 const ExperienceSection: React.FC<ExperienceSectionProps> = ({ experience }) => {

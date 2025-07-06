@@ -3,7 +3,7 @@ import SectionLayout from '../layout/SectionLayout'
 import Button from '../ui/Button'
 import { FeaturedProjectSectionProps } from '@/types/types'
 import { urlFor } from '@/lib/sanity'
-import FeatureProjectCard from '../cards/FeaturedProjectCard'
+import FeatureProjectCard from '../ui/cards/FeaturedProjectCard'
 
 const FeaturedProjectSection: React.FC<FeaturedProjectSectionProps> = ({ featuredProjects }) => {
 

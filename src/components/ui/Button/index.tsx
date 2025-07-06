@@ -74,8 +74,8 @@ const Button: React.FC<ButtonProps> = ({ label, onClick, className, variant, typ
   }
   return (
     <>
-      <button  onClick={onClick} className={`cursor-pointer rounded-full text-xl px-5 pt-[11px] pb-[13px] ${buttonClasses} ${className}`} disabled={disable}>{label}
-        {renderHoverEffect()}
+      <button onClick={onClick} className={`cursor-pointer rounded-full text-xl px-5 pt-[11px] pb-[13px] ${buttonClasses} ${className} ${disable ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`} disabled={disable}>{label}
+        {!disable && renderHoverEffect()}
       </button>
       {/* <button className="rounded-full bg-white border border-black text-xl px-5 pt-[11px] pb-[13px] text-black hover:bg-black hover:text-white transition-all duration-300">See My Portfolio</button> */}
     </>

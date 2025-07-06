@@ -1,11 +1,11 @@
 import { PortableText, PortableTextBlock } from 'next-sanity';
 import React from 'react'
-interface SingleBlogCenterContentProps {
+interface SingleProjectCenterContentProps {
     title: string;
     content?: PortableTextBlock[];
     description?: string;
 }
-const SingleBlogCenterContent: React.FC<SingleBlogCenterContentProps> = ({ title, content, description }) => {
+const SingleProjectCenterContent: React.FC<SingleProjectCenterContentProps> = ({ title, content, description }) => {
     return (
         <>
             <div className="order-1 xl:order-2 xl:px-4 shrink-[2] grow">
@@ -18,11 +18,11 @@ const SingleBlogCenterContent: React.FC<SingleBlogCenterContentProps> = ({ title
                 )}
                 {content && (
                     <>
-                        {content && (
+                        {/* {content && (
                             <p className="text-sm text-gray-700 italic mt-6 mb-2 bg-light-pink inline-block px-2 py-1 rounded">
                                  Ready to dive deep? Don't worry, no life jackets required.
                             </p>
-                        )}
+                        )} */}
                         <div className="xl:mt-6 blog-portable-text">
                             <PortableText value={content} />
                         </div>
@@ -33,4 +33,4 @@ const SingleBlogCenterContent: React.FC<SingleBlogCenterContentProps> = ({ title
     )
 }
 
-export default SingleBlogCenterContent
+export default SingleProjectCenterContent

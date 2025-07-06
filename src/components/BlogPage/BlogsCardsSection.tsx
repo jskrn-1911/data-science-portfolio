@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogCard from '../cards/BlogCard';
+import BlogCard from '../ui/cards/BlogCard';
 import { BlogPost } from '@/types/blog';
 
 interface BlogsCardsSectionProps {

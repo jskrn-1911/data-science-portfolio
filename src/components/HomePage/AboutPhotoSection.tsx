@@ -31,8 +31,8 @@ const AboutPhotoSection: React.FC<Props> = ({ images }) => {
     return index === 0
       ? 'bg-light-sky-blue'
       : index === 1
-      ? 'bg-pastel-yellow'
-      : 'bg-light-pink';
+        ? 'bg-pastel-yellow'
+        : 'bg-light-pink';
   };
 
   return (

@@ -4,9 +4,13 @@ import { PortableTextBlock } from 'next-sanity';
 export interface SanityImage {
   asset: {
     _type: string;
-    _ref: string;
+    _ref?: string;
+    _id?: string;
+    url?: string;
   };
+  title?: string;
 }
+
 
 // export interface PortableTextBlock {
 //   _type: string;
@@ -33,6 +37,7 @@ export interface Project {
   featured?: boolean;
   category?: string;
   views?: number;
+  authorName?: string | undefined;
 }
 
 export interface PortfolioCardsSectionProps {
@@ -40,19 +45,19 @@ export interface PortfolioCardsSectionProps {
 }
 
 export interface PortfolioCardProps {
-    imgSrc: StaticImageData | string;
-    title: string;
-    background: string;
-    buttonLabel?: string;
-    liveLink?: string;
-    githubLink?: string;
-    date?: string;
-    description?: string;
-    slug: {
-        _type: 'slug';
-        current: string;
-    };
-    category?: string;
-    views?: number;
+  imgSrc: StaticImageData | string;
+  title: string;
+  background: string;
+  buttonLabel?: string;
+  liveLink?: string;
+  githubLink?: string;
+  date?: string;
+  description?: string;
+  slug: {
+    _type: 'slug';
+    current: string;
+  };
+  category?: string;
+  views?: number;
 }
 

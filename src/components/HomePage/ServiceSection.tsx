@@ -1,5 +1,5 @@
 import React from 'react'
-import ServiceCard from '../cards/ServiceCard'
+import ServiceCard from '../ui/cards/ServiceCard'
 import SectionLayout from '../layout/SectionLayout'
 import { ServiceSectionProps } from '@/types/types'
 

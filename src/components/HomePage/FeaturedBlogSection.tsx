@@ -3,7 +3,7 @@ import SectionLayout from '../layout/SectionLayout'
 import Button from '../ui/Button'
 import { FeaturedBlogSectionProps } from '@/types/types'
 import { urlFor } from '@/lib/sanity'
-import FeaturedBlogCard from '../cards/FeaturedBlogCard'
+import FeaturedBlogCard from '../ui/cards/FeaturedBlogCard'
 
 const FeaturedBlogSection: React.FC<FeaturedBlogSectionProps> = ({ featuredBlogs }) => {
 

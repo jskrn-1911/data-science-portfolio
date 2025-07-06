@@ -5,14 +5,7 @@ interface SingleBlogLeftSidebarProps {
     categories?: string[];
 }
 const SingleBlogLeftSidebar: React.FC<SingleBlogLeftSidebarProps> = ({ publishTime, categories }) => {
-    // const localDateTime = new Date(publishTime).toLocaleString(undefined, {
-    //     year: 'numeric',
-    //     month: 'long',
-    //     day: 'numeric',
-    //     hour: 'numeric',
-    //     minute: '2-digit',
-    //     hour12: true, // use false if you want 24-hour format
-    // });
+   
     return (
         <>
             <div className="order-2 xl:order-1 xl:shrink xl:grow xl:max-w-[230px] w-full border border-black bg-white rounded-[16px] p-4">

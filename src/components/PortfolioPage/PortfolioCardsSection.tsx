@@ -1,5 +1,5 @@
 import React from 'react'
-import PortfolioCard from '../cards/PortfolioCard';
+import PortfolioCard from '../ui/cards/PortfolioCard';
 import { urlFor } from '@/lib/sanity';
 import { PortfolioCardsSectionProps } from '@/types/portfolio';
 

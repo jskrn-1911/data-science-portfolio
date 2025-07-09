@@ -20,7 +20,7 @@ const SingleBlogCenterContent: React.FC<SingleBlogCenterContentProps> = ({ title
                     <>
                         {content && (
                             <p className="text-sm text-gray-700 italic mt-6 mb-2 bg-light-pink inline-block px-2 py-1 rounded">
-                                 Ready to dive deep? Don't worry, no life jackets required.
+                                 Ready to dive deep? Dont worry, no life jackets required.
                             </p>
                         )}
                         <div className="xl:mt-6 blog-portable-text">

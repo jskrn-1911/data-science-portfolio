@@ -27,7 +27,7 @@ const page = async ({ params }: Props) => {
     const project = await fetchProjectBySlug(slug);
 
     if (!project) return notFound();
-    console.log("Project Page =>", project);
+    // console.log("Project Page =>", project);
     await incrementViewsById(project._id);
     return (
         <main>

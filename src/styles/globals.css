@@ -20,10 +20,12 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
   .hover-scale {
     @apply hover:scale-[1.05] transition-all duration-300;
   }
 }
+
 @font-face {
   font-family: "Outfit";
   src: url("../assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
@@ -31,6 +33,7 @@
   font-display: swap;
   font-style: normal;
 }
+
 /* body {
   font-family: "Outfit", sans-serif;
   font-size: 16px;
@@ -42,6 +45,7 @@
     margin-inline: auto;
     width: 100%;
   }
+
   .bg-dots {
     background-repeat: repeat;
     background-position: top left;
@@ -49,6 +53,17 @@
     background-image: url("../assets/images/bg_image_dots.svg");
   }
 }
+
 html {
   scroll-behavior: smooth;
 }
+
+.main-body ::selection {
+  background-color: #8c9eff;
+  /* color: #fff; */
+}
+
+.main-body ::-moz-selection {
+  background-color: #8c9eff;
+  /* color: #fff; */
+} 

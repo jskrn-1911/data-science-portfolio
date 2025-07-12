@@ -18,7 +18,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   // console.log("<<::testing for fetcher::>>", footerData);
   return (
     <html lang="en">
-      <body className={`antialiased font-outfit text-base font-normal relative text-black `}>
+      <body className={`main-body antialiased font-outfit text-base font-normal relative text-black `}>
         <div className="absolute inset-0 z-[-1] opacity-[.1] bg-dots h-full"></div>
         <Navbar {...navbarData} />
         <main className="py-[120px] xl:pt-[140px]">
